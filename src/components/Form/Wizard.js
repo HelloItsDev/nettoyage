@@ -81,6 +81,7 @@ class Wizard extends Component {
                   <form name="devis" data-netlify="true" netlify-honeypot="hello" onSubmit={handleSubmit}>
                     <input type="hidden" name="email" />
                     <input type="hidden" name="postalCode" />
+                    <input type="hidden" name="type" />
                     <input type="hidden" name="phone" />
                     <input type="hidden" name="surface" />
                     <input type="hidden" name="frequence" />
