@@ -27,7 +27,7 @@ function encode(data) {
 class Wizard extends Component {
   state = {
     pageIndex: 0,
-    pages: [PageOne, PageTwo, PageThree, PageFour, PageEmail, PagePhone,]
+    pages: [PageOne, PageTwo, PageThree, PageFour, PageEmail, PagePhone]
   };
 
     _navigateBack = () => {
@@ -79,6 +79,11 @@ class Wizard extends Component {
                 const { handleSubmit } = props;
                 return (
                   <form name="devis" data-netlify="true" onSubmit={handleSubmit}>
+                    <input type="hidden" name="email" />
+                    <input type="hidden" name="postalCode" />
+                    <input type="hidden" name="phone" />
+                    <input type="hidden" name="surface" />
+                    <input type="hidden" name="frequence" />
                     {this._renderPage(props)}
                   </form>
                 );
