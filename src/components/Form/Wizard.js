@@ -15,9 +15,14 @@ const initialValues = {
   surface :"100 - 200 m²",
   postalCode: "",
   email:"",
-  phone:"06",
-  'form-name': "Devis"
+  phone:"06"
 };
+
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
 
 class Wizard extends Component {
   state = {
@@ -59,21 +64,16 @@ class Wizard extends Component {
                 // phone: Yup.number().test('len', 'Télephone incorrect.', val => val.toString().length === 10).required("Le numéro de téléphone est requis."),
               })}
               onSubmit={(values, { setSubmitting }) => {
-                setTimeout(() => {
-                  alert(JSON.stringify(values, null, 2));
-                  setSubmitting(false);
-                }, 1000);
+                
                 fetch('/', {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                  body: JSON.stringify(values, null, 2),
+                  body: encode({ "form-name": "devis", ...values })
                 })
-                  .then(() => navigate('/thank you'))
+                  .then(() => alert("Success!"))
                   .catch(error => alert(error))
 
               }}
-              name="devis"
-              data-netlify="true"
             >
               {props => {
                 const { handleSubmit } = props;
