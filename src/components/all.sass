@@ -2,7 +2,7 @@
 
 // Config vars
 // Kalidi logo brand color: #FD461E
-$kaldi-red: #D64000
+$kaldi-red: #2B7BEC
 $kaldi-red-invert: #fff
 
 $primary: $kaldi-red
@@ -29,6 +29,12 @@ $black: #2b2523
     margin-top: 0
 
 // Helper Classes
+.intro
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  line-height: 1;
+  height: 55vh;
 .full-width-image-container
   width: 100vw
   height: 400px
@@ -44,29 +50,63 @@ $black: #2b2523
 
 .full-width-image
     width: 100vw
-    height: 400px
+    height: 85vh
     background-size: cover
     background-position: bottom
     display: flex
     justify-content: center
     align-items: center
 
-.btn
-    display: inline-block;
-    padding: 12px 16px 10px;
+.lp-input 
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+form .page
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  width: 450px;
+  border-radius: 3px;
+  background-color: #fff;
+  justify-content: space-between;
+  .question
+    padding: 20px;
     font-size: 18px;
-    font-size: 1rem;
-    line-height: 1.25;
-    background-color: #fff;
-    border-radius: .25rem;
-    text-decoration: none;
-    font-weight: 700;
-    color: #f40;
-    text-align: center;
-    -webkit-box-shadow: inset 0 0 0 2px #f40;
-    box-shadow: inset 0 0 0 2px #f40;
-    -webkit-transition: all .15s ease;
-    transition: all .15s ease;
+  .control-x
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px 0;
+    input
+      width: unset
+  .control-y
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    max-height: 260px;
+    overflow-y: auto;
+    label.radio 
+      cursor: pointer;
+      display: inline-block;
+      line-height: 1.25;
+      margin: 0 0.5em;
+      position: relative;
+      padding: 15px 20px;
+      border: 1px solid #efefef;
+      background-color: #FFFAFA;
+      margin-top: 2px;
+    .help.is-danger
+      align-self: center;
+  .page-footer
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px;
+
+
+
+
 
 .margin-top-0
   margin-top: 0 !important
@@ -80,6 +120,7 @@ $black: #2b2523
   fill: currentColor;
 .navbar-brand .navbar-item.logo
   padding: 0 1rem
+  max-height: 3.75rem;
 footer.footer
   padding: 3rem 0rem 0rem
   background-color: transparent
@@ -111,5 +152,12 @@ $menu-label-color: $white-ter
     height: 1em;
     vertical-align: middle;
     display: inline;
+
+@media screen and (max-width: 640px) 
+  .intro
+    height: unset
+  form .page
+    width: 85vw
+
 
 @import "~bulma"
