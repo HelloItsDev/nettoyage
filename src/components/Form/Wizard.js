@@ -78,7 +78,7 @@ class Wizard extends Component {
               {props => {
                 const { handleSubmit } = props;
                 return (
-                  <form onSubmit={handleSubmit}>
+                  <form name="devis" data-netlify="true" onSubmit={handleSubmit}>
                     {this._renderPage(props)}
                   </form>
                 );
