@@ -23,10 +23,10 @@ const TemplateWrapper = ({ children }) => (
       <div>
         <Helmet>
           <html lang="fr" />
-          <title>{data.site.siteMetadata.title}</title>
+          <title>Entreprise de nettoyage près de chez vous</title>
           <meta
             name="description"
-            content={data.site.siteMetadata.description}
+            content="Obtenez un devis en moins de 3 minutes"
           />
 
           <link
