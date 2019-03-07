@@ -3,7 +3,7 @@ templateKey: index-page
 title: Entreprise de nettoyage près de chez vous
 image: /img/entreprise-de-nettoyage-bureau.jpg
 heading: Entreprise de nettoyage près de chez vous
-subheading: Obtenez un devis en moins de 3 minutes
+subheading: Comparez les devis en moins de 3 minutes
 mainpitch:
   title: Why Kaldi
   description: >

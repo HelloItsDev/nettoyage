@@ -6,6 +6,14 @@ import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 import Wizard from '../components/Form/Wizard'
+import {Aux} from '../components/utility'
+
+import logoGratuit from '../img/gratuit.png'
+import logoExpertise from '../img/expertise.png'
+import logoNettoyage from '../img/nettoyage.png'
+import logoForm from '../img/formulaire.png'
+import logoPhone from '../img/phone.png'
+import logovalidation from '../img/validation.png'
 
 export const IndexPageTemplate = ({
   image,
@@ -17,7 +25,7 @@ export const IndexPageTemplate = ({
   intro,
   main,
 }) => (
-    <div>
+    <Aux>
         <div
           className="full-width-image margin-top-0"
           style={{
@@ -59,7 +67,71 @@ export const IndexPageTemplate = ({
       </div>
       </div>
     </div>
-  </div>
+    <div className="section-services container">
+      <div className="titre"><p>POURQUOI FAIRE APPEL À NOS <span>SERVICES</span> ?</p></div>
+      <div className="text">
+        <p>Trouvez une entreprise de nettoyage peut s'avérer compliqué, en passant par nous, vous vous assurez de trouver des sociétés de confiance au meilleur prix.</p>
+      </div>
+      <div className="services">
+        <div className="service">
+          <img src={logoGratuit} alt="gratuit"/>
+          <h3>Service 100% Gratuit</h3>
+          <p> Notre service est gratuit et sans engagement. La transparence fait partie intégrante de nos valeurs et de notre philosophie. </p>
+        </div>
+        <div className="service">
+          <img src={logoExpertise} alt="expertise"/>
+          <h3>Expertise sans engagement</h3>
+          <p> Vous profitez de l’expertise de nos partenaires sans engagement. Choisissez l’offre qui vous convient. </p>
+        </div>
+        <div className="service">
+            <img src={logoNettoyage} alt="partenaires qualifiés en nettoyage"/>
+          <h3>Partenaires qualifiés</h3>
+          <p> À vos cartons vous permet d'entrer en contact avec des professionnels qualifiés et d'obtenir des propositions adaptées à vos besoins. </p>
+        </div>
+      </div>
+    </div>
+    <div className="section-fonctionnement">
+      <div className="titre"><h2>COMPAREZ LES MEILLEURS <span>SOCIÉTÉS DE NETTOYAGES</span></h2></div>
+      <div className="text container">
+        <p>
+          Nos <span>experts en nettoyage</span> prennent contact avec vous pour vous proposer une offre adaptées à vos besoins. 
+          Vous n’avez ensuite plus qu’à choisir l’offre qui vous convient le mieux pour un <span>nettoyage efficace</span> au <span>meilleur prix</span>.
+        </p>
+        <br />
+        <p>
+          Nos partenaires sont selectionnés selon plusieurs critères, les plus importants étants,
+           leurs <span>professionalismes</span>, leurs <span>réputations</span>, leurs <span>proximités</span> et leurs <span>prix</span>.
+        </p>
+        <br />
+        <br />
+        <Link to="/guide">Consultez notre guide pour bien choisir votre société de nettoyage.</Link>
+        <br />
+        <br />
+
+        <Link to="/demande-de-devis" className="button is-primary">Faire une demande de devis</Link>
+              
+      </div>
+    </div>
+    <div className="section-resume container" >
+      <div className="action">
+        <img src={logoForm} alt="définission les besoins"/>
+        <h3>Je définis mon besoin</h3>
+        <p>en remplissant le formulaire</p>
+      </div>
+      <p> > </p>
+      <div className="action">
+        <img src={logoPhone} alt="reception des devis"/>
+        <h3>Je reçois des devis</h3>
+        <p>des meilleurs entreprises de nettoyages</p>
+      </div>
+      <p> > </p>
+      <div className="action">
+        <img src={logovalidation} alt="Choix du prestataire"/>
+        <h3>Je souscris</h3>
+        <p>à la meilleure offre</p>
+      </div>
+    </div>
+  </Aux>
 )
 
 IndexPageTemplate.propTypes = {

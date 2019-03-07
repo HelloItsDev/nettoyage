@@ -55,7 +55,7 @@ const TemplateWrapper = ({ children }) => (
           <meta name="theme-color" content="#fff" />
 
           <meta property="og:type" content="business.business" />
-          <meta property="og:title" content={data.site.siteMetadata.title} />
+          <meta property="og:title" content="Entreprise de nettoyage près de chez vous"/>
           <meta property="og:url" content="/" />
           <meta property="og:image" content="/img/og-image.jpg" />
         </Helmet>

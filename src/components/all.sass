@@ -103,11 +103,100 @@ form .page
     flex-direction: row;
     justify-content: space-evenly;
     padding: 20px;
-  
+  .radio input 
+    margin-right: 6px;
+
+//Banner
+
+.banner 
+  height: calc(15vh - 70px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 19px;
+  font-weight: 400;
+
+//Services
+
+.section-services
+  display: flex;
+  flex-direction: column;
+  padding: 80px 0;
+  .titre
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+    span 
+      color: #2b7bec
+  .text 
+    padding: 0 21%;
+    span 
+      color: #2b7bec
+  .services
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 70px 0;
+    .service
+      display: flex
+      flex-direction: column
+      max-width: 300px;
+      align-items: center
+      text-align: center
+      img
+        max-height: 100px;
+      h3 
+        margin-top: 29px;
+        margin-bottom: 12px;
+        font-size: 22px;
+        font-weight: 700;
+        color: #2b7bec;
 
 
+//fonctionnement
 
-
+.section-fonctionnement
+  display: flex;
+  flex-direction: column;
+  padding: 80px 0;
+  background-color: #EDF1F4;
+  .titre
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+    span 
+      color: #2b7bec
+  .text 
+    padding: 0 21%;
+    span 
+      color: #2b7bec
+.section-resume 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 70px 0;
+  align-items: center;
+  font-size: 70px;
+  .action
+    display: flex
+    flex-direction: column
+    max-width: 300px;
+    align-items: center
+    text-align: center
+    img
+      max-height: 100px;
+    h3 
+      margin-top: 29px;
+      font-size: 22px;
+      font-weight: 700;
+      color: #2b7bec;
+    p 
+      font-size: 18px;
+      font-weight: 700;
+      color: #2b7bec;
 
 .margin-top-0
   margin-top: 0 !important
@@ -159,6 +248,18 @@ $menu-label-color: $white-ter
     height: unset
   form .page
     width: 85vw
+  .services 
+    flex-wrap: wrap;
+    .service
+      width: 80vw;
+      margin-bottom: 40px;
+  .section-resume 
+    flex-wrap: wrap;
+    p 
+      display: none;
+    .action
+      width: 80vw;
+      margin-bottom: 40px;
 
 
 @import "~bulma"
