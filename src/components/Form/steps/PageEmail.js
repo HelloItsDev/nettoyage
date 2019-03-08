@@ -25,7 +25,7 @@ const PageEmail = props => (
 		</button>
 		<button
 			type="button"
-			onClick={props.navigateNext}
+			onClick={() => props.navigateNext(props.values)}
 			disabled={!(props.values.email)}
 			className="button is-primary"
 		>

@@ -25,7 +25,7 @@ const PageFour = props => (
 		</button>
 		<button
 			type="button"
-      onClick={props.navigateNext}
+      onClick={() => props.navigateNext(props.values)}
       disabled={!(props.values.postalCode)|| props.errors["postalCode"]}
 			className="button is-primary"
 		>

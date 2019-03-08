@@ -55,7 +55,7 @@ const PageTwo = props => (
 		</button>
 		<button
 			type="button"
-			onClick={props.navigateNext}
+			onClick={() => props.navigateNext(props.values)}
 			className="button is-primary"
 		>
 			Continuer

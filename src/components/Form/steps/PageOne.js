@@ -35,7 +35,7 @@ const PageOne = props => (
 		<div className="page-footer">
 			<button
 				type="button"
-				onClick={props.navigateNext}
+				onClick={() => props.navigateNext(props.values)}
 				className="button is-primary"
 			>
 				Continuer

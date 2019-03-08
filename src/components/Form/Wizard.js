@@ -37,8 +37,8 @@ class Wizard extends Component {
     };
 
     _navigateNext = (values) => {
+        console.log(values);
         this.setState(prevState => {
-          
           {
             if (window && window.dataLayer) {
               window.dataLayer.push({
@@ -61,7 +61,7 @@ class Wizard extends Component {
             <Page
                 {...formProps}
                 navigateBack={this._navigateBack}
-                navigateNext={(val) => this._navigateNext(val)}
+                navigateNext={this._navigateNext}
                 pageIndex={this.state.pageIndex}
             />
         );
