@@ -36,10 +36,19 @@ class Wizard extends Component {
         }));
     };
 
-    _navigateNext = () => {
-        this.setState(prevState => ({
+    _navigateNext = (values) => {
+        this.setState(prevState => {
+          {
+            window.dataLayer.push({
+              event: 'nextStep',
+              currentStep: prevState.pageIndex + 1,
+              formVals: values
+            });
+          }
+          return ({
             pageIndex: prevState.pageIndex + 1
-        }));
+        })
+      });
     };
 
     _renderPage = formProps => {
@@ -49,7 +58,7 @@ class Wizard extends Component {
             <Page
                 {...formProps}
                 navigateBack={this._navigateBack}
-                navigateNext={this._navigateNext}
+                navigateNext={(val) => this._navigateNext(val)}
                 pageIndex={this.state.pageIndex}
             />
         );
@@ -61,7 +70,7 @@ class Wizard extends Component {
               validationSchema={Yup.object().shape({
                 email: Yup.string().required("L'email est incorrect."),
                 postalCode: Yup.number().test('len', 'Code postal incorrect.', val => val.toString().length === 5).required("Le code postal est requis."),
-                // phone: Yup.number().test('len', 'Télephone incorrect.', val => val.toString().length === 10).required("Le numéro de téléphone est requis."),
+                phone: Yup.number().test('len', 'Numéro de télephone incorrect.', val => val.toString().length === 10).required("Le numéro de téléphone est requis."),
               })}
               onSubmit={(values, { setSubmitting }) => {
                 
@@ -70,7 +79,14 @@ class Wizard extends Component {
                   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                   body: encode({ "form-name": "devis", ...values })
                 })
-                  .then(() => alert("Success!"))
+                  .then(() => {
+                    {
+                      window.dataLayer.push({
+                        event: 'newQuote'
+                      });
+                    }
+                    alert("Success!")
+                  })
                   .catch(error => alert(error))
 
               }}
