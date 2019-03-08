@@ -37,7 +37,6 @@ class Wizard extends Component {
     };
 
     _navigateNext = (values) => {
-        console.log(values);
         this.setState(prevState => {
           {
             if (window && window.dataLayer) {
