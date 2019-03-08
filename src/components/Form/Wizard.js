@@ -38,12 +38,15 @@ class Wizard extends Component {
 
     _navigateNext = (values) => {
         this.setState(prevState => {
+          
           {
-            window.dataLayer.push({
-              event: 'nextStep',
-              currentStep: prevState.pageIndex + 1,
-              formVals: values
-            });
+            if (window && window.dataLayer) {
+              window.dataLayer.push({
+                event: 'nextStep',
+                currentStep: prevState.pageIndex + 1,
+                formVals: encode({ "form-name": "devis", ...values })
+              });
+            }
           }
           return ({
             pageIndex: prevState.pageIndex + 1
@@ -70,7 +73,7 @@ class Wizard extends Component {
               validationSchema={Yup.object().shape({
                 email: Yup.string().required("L'email est incorrect."),
                 postalCode: Yup.number().test('len', 'Code postal incorrect.', val => val.toString().length === 5).required("Le code postal est requis."),
-                phone: Yup.number().test('len', 'Numéro de télephone incorrect.', val => val.toString().length === 10).required("Le numéro de téléphone est requis."),
+                phone: Yup.number().test('len', 'Numéro de télephone incorrect.', val => val.toString().length === 9).required("Le numéro de téléphone est requis."),
               })}
               onSubmit={(values, { setSubmitting }) => {
                 
