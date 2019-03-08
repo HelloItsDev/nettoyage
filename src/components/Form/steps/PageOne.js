@@ -3,7 +3,7 @@ import { RadioButton, RadioButtonGroup} from '../FormFields'
 import { Field } from 'formik';
 
 const PageOne = props => (
-	<div className="page">
+	<div className={`page page${props.pageIndex}`}>
 		<p className="question"> Quel type de propriété avez-vous besoin de nettoyer ? </p>
 		<RadioButtonGroup
             id="type"

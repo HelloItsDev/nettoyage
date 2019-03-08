@@ -3,7 +3,7 @@ import { RadioButton, RadioButtonGroup} from '../FormFields'
 import { Field } from 'formik';
 
 const PageTwo = props => (
-	<div className="page">
+	<div className={`page page${props.pageIndex}`}>
 		<p className="question"> À quelle fréquence souhaitez-vous bénéficier du service de nettoyage ? </p>
 		<RadioButtonGroup
             id="frequence"

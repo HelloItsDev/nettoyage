@@ -3,7 +3,7 @@ import { Input } from '../FormFields'
 import { Field } from 'formik';
 
 const PagePhone = props => (
-	<div className="page">
+	<div className={`page page${props.pageIndex}`}>
 		<p className="question"> Recevez des réponses encore plus vite avec votre numéro de télephone. </p>
 		<div>
       <Field

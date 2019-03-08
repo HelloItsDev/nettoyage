@@ -3,7 +3,7 @@ import { Input } from '../FormFields'
 import { Field } from 'formik';
 
 const PageEmail = props => (
-	<div className="page">
+	<div className={`page page${props.pageIndex}`}>
 		<p className="question"> Nous ne partagerons pas votre email avec les Pros </p>
 		<div>
       <Field

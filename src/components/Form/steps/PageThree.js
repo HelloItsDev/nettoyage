@@ -3,7 +3,7 @@ import { RadioButton, RadioButtonGroup} from '../FormFields'
 import { Field } from 'formik';
 
 const PageThree = props => (
-	<div className="page">
+	<div className={`page page${props.pageIndex}`}>
 		<p className="question"> Quelle est la superficie approximative de la zone à nettoyer ? </p>
 		<RadioButtonGroup
             id="surface"

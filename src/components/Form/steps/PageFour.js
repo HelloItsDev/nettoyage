@@ -3,7 +3,7 @@ import { Input } from '../FormFields'
 import { Field } from 'formik';
 
 const PageFour = props => (
-	<div className="page">
+	<div className={`page page${props.pageIndex}`}>
 		<p className="question"> Code postal du lieu où le travail doit être effectué </p>
 		<div>
       <Field
