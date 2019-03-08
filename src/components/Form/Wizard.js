@@ -44,7 +44,7 @@ class Wizard extends Component {
               window.dataLayer.push({
                 event: 'nextStep',
                 currentStep: prevState.pageIndex + 1,
-                formVals: encode({ "form-name": "devis", ...values })
+                formVals: JSON.stringify({ "form-name": "devis", ...values })
               });
             }
           }

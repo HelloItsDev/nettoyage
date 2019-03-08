@@ -29,7 +29,7 @@ const PageEmail = props => (
 			disabled={!(props.values.email)}
 			className="button is-primary"
 		>
-			Envoyer
+			Continuer
 		</button>
 		</div>
 		
