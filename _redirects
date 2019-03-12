@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://nettoyage.netlify.com/* https://entreprises-de-nettoyage.fr/:splat 301!
