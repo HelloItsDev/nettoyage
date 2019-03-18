@@ -70,7 +70,7 @@ export const IndexPageTemplate = ({
     <div className="section-services container">
       <div className="titre"><p>POURQUOI FAIRE APPEL À NOS <span>SERVICES</span> ?</p></div>
       <div className="text">
-        <p>Trouvez une entreprise de nettoyage peut s'avérer compliqué, en passant par nous, vous vous assurez de trouver des sociétés de confiance au meilleur prix.</p>
+        <p>Trouvez une entreprise de nettoyage peut s'avérer compliqué. En passant par nous, vous vous assurez de trouver des sociétés de confiance au meilleur prix tout en gagnant du temps.</p>
       </div>
       <div className="services">
         <div className="service">
@@ -85,8 +85,8 @@ export const IndexPageTemplate = ({
         </div>
         <div className="service">
             <img src={logoNettoyage} alt="partenaires qualifiés en nettoyage"/>
-          <h3>Partenaires qualifiés</h3>
-          <p> À vos cartons vous permet d'entrer en contact avec des professionnels qualifiés et d'obtenir des propositions adaptées à vos besoins. </p>
+          <h3>Partenaires de confiance</h3>
+          <p> Nous vous permetons d'entrer en contact avec des professionnels recommandé par nos utilisateurs. </p>
         </div>
       </div>
     </div>
@@ -113,7 +113,9 @@ export const IndexPageTemplate = ({
       </div>
     </div>
     <div className="section-resume container" >
-      <div className="action">
+    <div className="titre"><h2>COMMENT ÇA MARCHE ?</h2></div>
+    <div className="actions" >
+    <div className="action">
         <img src={logoForm} alt="définission les besoins"/>
         <h3>Je définis mon besoin</h3>
         <p>en remplissant le formulaire</p>
@@ -126,10 +128,12 @@ export const IndexPageTemplate = ({
       </div>
       <p> > </p>
       <div className="action">
-        <img src={logovalidation} alt="Choix du prestataire"/>
+        <img src={logovalidation} style={{maxHeight: '50px'}} alt="Choix du prestataire"/>
         <h3>Je souscris</h3>
         <p>à la meilleure offre</p>
       </div>
+    </div>
+      
     </div>
   </Aux>
 )

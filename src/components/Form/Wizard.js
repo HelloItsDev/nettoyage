@@ -41,9 +41,21 @@ class Wizard extends Component {
           {
             if (window && window.dataLayer) {
               window.dataLayer.push({
-                event: 'nextStep',
-                currentStep: prevState.pageIndex + 1,
-                formVals: JSON.stringify({ "form-name": "devis", ...values })
+                event: 'eec.checkout',
+                ecommerce: {
+                  actionField: {
+                    step: prevState.pageIndex + 1
+                  },/* 
+                  products: [{
+                    id: 'devis',
+                    dimension1: values.type,
+                    dimension2: values.frequence,
+                    dimension3: values.surface,
+                    dimension4: values.postalCode,
+                    dimension5: values.email,
+                    dimension6: values.phone,
+                  }] */
+                }
               });
             }
           }
@@ -84,7 +96,18 @@ class Wizard extends Component {
                   .then(() => {
                     {
                       window.dataLayer.push({
-                        event: 'newQuote'
+                        event: 'newQuote',
+                        ecommerce: {
+                          products: [{
+                            id: 'devis',
+                            dimension1: values.type,
+                            dimension2: values.frequence,
+                            dimension3: values.surface,
+                            dimension4: values.postalCode,
+                            dimension5: values.email,
+                            dimension6: values.phone,
+                          }]
+                        }
                       });
                     }
                     alert("Success!")
